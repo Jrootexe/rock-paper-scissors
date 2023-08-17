@@ -22,9 +22,17 @@ function playRound(playerSelection, computerSelection){
     } else if (playerSelection === "paper" && computerSelection === "rock") {
         return("You Win! Paper beats Rock!");
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        return("You Win! Scissors beat Rock!");
+        return("You Win! Scissors beat Paper!");
+    } else if (playerSelection === "rock" && computerSelection === "rock") {
+        return("It's a draw! Rock can't beat Rock!");
+    } else if (playerSelection === "paper" && computerSelection === "paper") {
+        return("It's a draw! Paper can't beat Paper!");
+    } else if (playerSelection === "scissors" && computerSelection === "scissors") {
+        return("It's a draw! Scissors can't beat Scissors!")
     }
 }
 
 const computerSelection = getComputerChoice().toLowerCase();
-const playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase()
+const playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
+
+console.log(playRound(playerSelection, computerSelection));
