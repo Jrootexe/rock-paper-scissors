@@ -1,3 +1,5 @@
+//create function to get random result from computer
+
 function getComputerChoice(){
     let x = Math.floor((Math.random() * 100) + 1);
 
@@ -10,23 +12,33 @@ function getComputerChoice(){
     }
 }
 
+// Create function to get results of playerSelection and computerSelection in the game
+
 function playRound(playerSelection, computerSelection){
     if (playerSelection === "rock" && computerSelection === "paper") {
         return("You Lose! Paper beats Rock!");
+
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
         return("You Lose! Scissors beat Paper!");
+
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
         return("You Lose! Rock beats Scissors!");
+
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
         return("You Win! Rock beats Scissors!");
+
     } else if (playerSelection === "paper" && computerSelection === "rock") {
         return("You Win! Paper beats Rock!");
+
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
         return("You Win! Scissors beat Paper!");
+
     } else if (playerSelection === "rock" && computerSelection === "rock") {
         return("It's a draw! Rock can't beat Rock!");
+
     } else if (playerSelection === "paper" && computerSelection === "paper") {
         return("It's a draw! Paper can't beat Paper!");
+
     } else if (playerSelection === "scissors" && computerSelection === "scissors") {
         return("It's a draw! Scissors can't beat Scissors!")
     }
@@ -37,6 +49,8 @@ const computerSelection = getComputerChoice().toLowerCase();
 // playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
 
 // console.log(playRound(playerSelection, computerSelection));
+
+//create function to play five rounds of the game and determine who the winner is
 
 function game(){
     let playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
