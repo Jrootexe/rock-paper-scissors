@@ -14,9 +14,10 @@ function getComputerChoice(){
 
 // Create function to get results of playerSelection and computerSelection in the game
 
-let record = []; 
+let record = [];
 
 function playRound(playerSelection, computerSelection){ 
+    
     if (playerSelection === "rock" && computerSelection === "paper") {
         record.push("Lose");
         return("You Lose! Paper beats Rock!");
@@ -64,6 +65,7 @@ let computerSelection = getComputerChoice().toLowerCase();
 //create function to play five rounds of the game and determine who the winner is
 
 function game(){
+    
     let playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
     
     let computerSelection = getComputerChoice().toLowerCase();
