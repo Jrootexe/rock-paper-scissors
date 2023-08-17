@@ -9,3 +9,10 @@ function getComputerChoice(){
         return("Scissors");
     }
 }
+
+function playRound(playerSelection, computerSelection){
+    
+}
+
+const computerSelection = getComputerChoice();
+const playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase()
