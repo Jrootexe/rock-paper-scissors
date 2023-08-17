@@ -12,7 +12,7 @@ function getComputerChoice(){
 
 function playRound(playerSelection, computerSelection){
     if (playerSelection === "rock" && computerSelection === "paper") {
-        return("You Lose! Paper beats rock!");
+        return("You Lose! Paper beats Rock!");
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
         return("You Lose! Scissors beat Paper!");
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
@@ -33,6 +33,29 @@ function playRound(playerSelection, computerSelection){
 }
 
 const computerSelection = getComputerChoice().toLowerCase();
-const playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
 
-console.log(playRound(playerSelection, computerSelection));
+// playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
+
+// console.log(playRound(playerSelection, computerSelection));
+
+function game(){
+    let playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
+    
+    console.log(playRound(playerSelection, computerSelection));
+
+    playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
+
+    console.log(playRound(playerSelection, computerSelection));
+
+    playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
+
+    console.log(playRound(playerSelection, computerSelection));
+
+    playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
+
+    console.log(playRound(playerSelection, computerSelection));
+
+    playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
+
+    console.log(playRound(playerSelection, computerSelection));
+}
