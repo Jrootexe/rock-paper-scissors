@@ -65,7 +65,8 @@ let computerSelection = getComputerChoice().toLowerCase();
 //create function to play five rounds of the game and determine who the winner is
 
 function game(){
-    
+    record.splice(0, 5)
+
     let playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
     
     let computerSelection = getComputerChoice().toLowerCase();
@@ -96,5 +97,19 @@ function game(){
 
     console.log(playRound(playerSelection, computerSelection));
 
+    const winCount = "Win";
+
+    let wCount = record.filter(x => x == winCount).length
+
+    console.log(wCount)
+
+    const loseCount = "Lose";
+
+    let lCount = record.filter(x => x == loseCount).length
+
+    console.log(lCount)
+
+    if ()
+    
     return(record);
 }
