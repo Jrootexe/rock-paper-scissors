@@ -109,7 +109,12 @@ function game(){
 
     console.log(lCount)
 
-    if ()
+    if (wCount > lCount)
+        console.log("Congratulations! You are the winner!")
+    else if (wCount < lCount)
+        console.log("That's too bad. You lost.")
+    else if (wCount === lCount)
+        console.log("You're evenly matched! It's a draw!")
     
     return(record);
 }
