@@ -101,20 +101,15 @@ function game(){
 
     let wCount = record.filter(x => x == winCount).length
 
-    console.log(wCount)
-
     const loseCount = "Lose";
 
     let lCount = record.filter(x => x == loseCount).length
 
-    console.log(lCount)
-
-    if (wCount > lCount)
-        console.log("Congratulations! You are the winner!")
-    else if (wCount < lCount)
-        console.log("That's too bad. You lost.")
-    else if (wCount === lCount)
-        console.log("You're evenly matched! It's a draw!")
-    
-    return(record);
+    if (wCount > lCount) {
+        return (`Congratulations! You are the winner!`);
+    } else if (wCount < lCount) {
+        return (`That's too bad. You lost.`);
+    } else if (wCount === lCount) {
+        return (`You're evenly matched! It's a draw!`);
+    }
 }
