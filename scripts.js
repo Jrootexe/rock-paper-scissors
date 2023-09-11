@@ -67,7 +67,7 @@ let computerSelection = getComputerChoice().toLowerCase();
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        alert(playRound(button.id, computerSelection));
+        alert(playRound(button.id, getComputerChoice().toLowerCase()));
     });
 });
 
