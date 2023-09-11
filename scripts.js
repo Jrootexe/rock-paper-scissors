@@ -64,6 +64,13 @@ let computerSelection = getComputerChoice().toLowerCase();
 
 //create function to play five rounds of the game and determine who the winner is
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(playRound(button.id, computerSelection));
+    });
+});
+
 function game(){
     record.splice(0, 5)
 
@@ -73,7 +80,7 @@ function game(){
 
     console.log(playRound(playerSelection, computerSelection));
 
-    playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
+ /* playerSelection = prompt("Choose Rock, Paper, or Scissors:").toLowerCase();
     
     computerSelection = getComputerChoice().toLowerCase();
 
@@ -95,7 +102,7 @@ function game(){
     
     computerSelection = getComputerChoice().toLowerCase();
 
-    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection)); */
 
     const winCount = "Win";
 
