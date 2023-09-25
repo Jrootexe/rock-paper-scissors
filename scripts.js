@@ -57,14 +57,44 @@ function playRound(playerSelection, computerSelection){
 
 let computerSelection = getComputerChoice().toLowerCase();
 
+//
+
 const buttons = document.querySelectorAll('button');
+let count = 0;
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         document.getElementById('results').innerHTML += playRound(button.id, getComputerChoice().toLowerCase());
+        count++;
+        console.log(count);
     });
 });
 
-// document.getElementById('results').innerHTML = playRound()
+if (count === 5) {
+    console.log(countResults());
+} else if (count > 5) {
+    record.splice(0, 5)
+} else {
+    //do nothing
+}
+
+function countResults(){
+    const winCount = "Win";
+
+    let wCount = record.filter(x => x == winCount).length
+
+    const loseCount = "Lose";
+
+    let lCount = record.filter(x => x == loseCount).length
+
+    if (wCount > lCount) {
+        return (`Congratulations! You are the winner!`);
+    } else if (wCount < lCount) {
+        return (`That's too bad. You lost.`);
+    } else if (wCount === lCount) {
+        return (`You're evenly matched! It's a draw!`);
+    }
+}
+//
 
 function game(){
     record.splice(0, 5)
