@@ -65,17 +65,16 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         document.getElementById('results').innerHTML += playRound(button.id, getComputerChoice().toLowerCase());
         count++;
-        console.log(count);
+        console.log(count)
+        if (count === 5) {
+            console.log(countResults());
+        } else if (count > 5) {
+            record.splice(0, 5);
+        } else {
+            //do nothing
+        }
     });
 });
-
-if (count === 5) {
-    console.log(countResults());
-} else if (count > 5) {
-    record.splice(0, 5)
-} else {
-    //do nothing
-}
 
 function countResults(){
     const winCount = "Win";
