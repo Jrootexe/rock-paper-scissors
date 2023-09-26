@@ -66,9 +66,8 @@ buttons.forEach((button) => {
         document.getElementById('results').innerHTML += playRound(button.id, getComputerChoice().toLowerCase());
         count++;
         console.log(count)
-        if (count === 5) {
-            console.log(countResults());
-        } else if (count > 5) {
+        if (count % 5 === 0) {
+            document.getElementById('results').innerHTML += countResults();
             record.splice(0, 5);
         } else {
             //do nothing
@@ -86,11 +85,11 @@ function countResults(){
     let lCount = record.filter(x => x == loseCount).length
 
     if (wCount > lCount) {
-        return (`Congratulations! You are the winner!`);
+        return (`<h3>Congratulations! You are the winner!</h3>`);
     } else if (wCount < lCount) {
-        return (`That's too bad. You lost.`);
+        return (`<h3>That's too bad. You lost.</h3>`);
     } else if (wCount === lCount) {
-        return (`You're evenly matched! It's a draw!`);
+        return (`<h3>You're evenly matched! It's a draw!</h3>`);
     }
 }
 //
